@@ -1,5 +1,6 @@
-joblib
-warnings
-pandas 
 flask
-sklearn
+pandas
+scikit-learn
+joblib
+numpy
+
