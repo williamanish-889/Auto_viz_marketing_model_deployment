@@ -44,4 +44,4 @@ if __name__ == '__main__':
     # However, for demonstration purposes, we'll just show the structure.
     print("To run this Flask app locally, save it as a .py file and execute 'python your_app_name.py'")
     print("Then, you can send POST requests to http://127.0.0.1:5000/predict")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
