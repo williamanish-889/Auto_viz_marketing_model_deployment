@@ -3,13 +3,17 @@ import warnings
 import pandas as pd
 from flask import Flask, request, jsonify
 from sklearn.base import InconsistentVersionWarning
+import os
 
 app = Flask(__name__)
 # Suppress the specific InconsistentVersionWarning
 warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
 
 # Load the model from the .pkl file
-model = joblib.load('/content/Auto_Viz_marketing_model.pkl')
+
+
+MODEL_PATH = os.path.join(os.getcwd(), "Auto_Viz_marketing_model.pkl")
+model = joblib.load(MODEL_PATH)
 
 
 @app.route('/predict', methods=['POST'])
